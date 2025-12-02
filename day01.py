@@ -1,3 +1,4 @@
+import time
 with open("inputs/01.txt", "r") as File:
     codes = [(line[0], int(line[1:])) for line in File.readlines()]
 
@@ -11,6 +12,7 @@ def countZeroes(dir, curr, new) -> int:
             ans -= 1
     return ans
 
+t0 = time.time()
 ans_p1, ans_p2 = 0, 0
 current = 50
 for dir, num in codes:
@@ -22,6 +24,8 @@ for dir, num in codes:
         ans_p1 += 1
     ans_p2 += countZeroes(dir, current, new)
     current = new
+t1 = time.time()
 
 print(f"Part 1 answer: {ans_p1}")
 print(f"Part 2 answer: {ans_p2}")
+print(f"Time: {t1 - t0:.3f}s")
