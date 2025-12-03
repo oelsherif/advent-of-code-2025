@@ -31,7 +31,7 @@ def getInvalidIDs(span, k):
     return [int(str(num) * k) for num in range(low, high+1)]
 
 def getSum(span, n = None):
-    '''return the sum all the total invalid IDs'''
+    '''return the sum of all the total invalid IDs'''
     if n is None:
         n = len(span[1])
     invalid_IDs = set()
