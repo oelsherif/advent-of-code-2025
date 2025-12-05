@@ -56,5 +56,3 @@ print(f"Part 1 answer: {ans_p1}")
 print(f"Part 2 answer: {ans_p2}")
 print(f"Part 1 time: {t1 - t0:.3f}s")
 print(f"Part 2 time: {t2 - t1:.3f}s")
-
-
