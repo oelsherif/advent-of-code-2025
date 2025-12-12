@@ -9,6 +9,7 @@ for line in lines:
     outputs[before] = after.split()
 
 def count_paths(start: str, ends: list[str], memory):
+    '''count the number of paths to get from the start to each of the ends'''
     past_ans = memory.get(start)
     if past_ans is not None:
         return past_ans
